@@ -132,6 +132,8 @@ async function askWithTools(companyName, maxTokens) {
                         })
                     });
                     break;
+                default:
+                    throw new Error(`Unsupported tool: ${call.function.name}`);
             }
         }
     }
